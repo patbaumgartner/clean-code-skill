@@ -1,0 +1,33 @@
+name: Rule, guide, or workflow proposal
+description: Suggest a new or changed rule, language guide, workflow, or adapter
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please read [CONTRIBUTING.md](https://github.com/patbaumgartner/clean-code-skill/blob/main/CONTRIBUTING.md) first. Proposals must be in your
+        own words and must not reproduce text, code, or examples from the book.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of change
+      options:
+        - Rule or heuristic wording
+        - Language guide (new or updated)
+        - Workflow (review or refactor)
+        - Adapter for another tool
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change, and why does it help agents or users?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Links to primary sources, tool documentation, or a transcript showing the problem.

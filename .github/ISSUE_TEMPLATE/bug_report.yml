@@ -1,0 +1,59 @@
+name: Bug report
+description: The skill does not trigger, triggers wrongly, or gives incorrect guidance
+labels: [bug]
+body:
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Tool
+      options:
+        - Claude Code
+        - GitHub Copilot (VS Code)
+        - GitHub Copilot CLI
+        - OpenCode
+        - OpenAI Codex
+        - Gemini CLI
+        - Cursor
+        - Windsurf
+        - Amp
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: tool-version
+    attributes:
+      label: Tool and version
+      placeholder: "e.g. Claude Code 2.1.x"
+    validations:
+      required: true
+  - type: input
+    id: skill-version
+    attributes:
+      label: Skill version or commit
+      placeholder: "e.g. v1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How was it installed?
+      options:
+        - npx skills
+        - scripts/install.sh
+        - Claude Code plugin
+        - Manual copy
+        - Rule-file adapter
+        - Other
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Include the prompt you used and what the agent did.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true

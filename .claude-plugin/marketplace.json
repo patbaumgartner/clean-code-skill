@@ -1,0 +1,21 @@
+{
+  "name": "clean-code-skill",
+  "owner": {
+    "name": "Patrick Baumgartner",
+    "url": "https://github.com/patbaumgartner"
+  },
+  "metadata": {
+    "description": "Marketplace for the clean-code agent skill."
+  },
+  "plugins": [
+    {
+      "name": "clean-code",
+      "source": "./",
+      "description": "Clean Code principles for AI coding agents: write, review, and refactor code with named smells, language guides, and review and refactor workflows.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "category": "development",
+      "keywords": ["clean-code", "code-review", "refactoring", "agent-skills"]
+    }
+  ]
+}
