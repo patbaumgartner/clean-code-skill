@@ -1,0 +1,57 @@
+# Clean Code Rules
+
+Write code that is easy to read, change, and test. Finish the requested task first, then leave
+the code you touched a little cleaner than you found it (the Boy Scout Rule).
+
+## How to apply these rules
+
+- Clean up only what you touch or what blocks the task; never start an unrequested rewrite.
+- Project conventions, formatters, and linters beat these rules; match the surrounding code.
+- Rules are heuristics, not laws. Note a deliberate exception in one short line.
+- Refactor only under passing tests; never mix refactoring with behavior changes.
+- When reviewing or reporting, cite rule codes (for example `G5`, `F3`, `N1`).
+
+## Names
+
+- Reveal intent; avoid disinformation and noise words; make names pronounceable and searchable (N1, N4).
+- Types are nouns, functions are verbs; one word per concept (N3). Name length grows with scope (N5).
+- A name that hides a side effect is wrong (N7, G20).
+
+## Functions
+
+- Do one thing at one level of abstraction (G30, G34); extract until the body reads like prose.
+- Few arguments (F1); no flag arguments (F3); no output arguments (F2); no selector arguments (G15).
+- Either do something or answer something, not both (command-query separation).
+- Guard clauses over deep nesting; name complex conditions (G28) and prefer positive ones (G29).
+- Named constants instead of magic values (G25); delete dead code (F4, G9).
+
+## Comments
+
+- Explain why, not what (C3); no history or authorship (C1); delete stale comments (C2).
+- Never commit commented-out code (C5).
+
+## Errors and boundaries
+
+- Fail loudly with context; never swallow errors or mute warnings, linters, or tests (G4).
+- Do not return or pass null where an empty value, option type, or special-case object fits.
+- Wrap third-party APIs behind your own seam; test boundary conditions (G3, T5).
+
+## Structure
+
+- Remove duplication first (G5); keep abstraction levels consistent (G6).
+- Single Responsibility, Open-Closed, Dependency Inversion; hide data, expose behavior (G14, G36).
+- Construct dependencies at the edge and inject them; prefer polymorphism to repeated switches (G23).
+
+## Tests
+
+- Test what you add or change; one concept per test (T1, T3); keep tests fast and independent (T9).
+- Never skip or weaken a test to get green (T4, G4).
+- Keep one command to build (E1) and one to test (E2).
+
+## AI-assisted changes
+
+- Search for an existing helper before writing a new one; keep diffs small and reviewable.
+- Never invent APIs; check real signatures. Say what you ran and what you did not.
+
+Full catalog, language guides, and review and refactor workflows:
+https://github.com/patbaumgartner/clean-code-skill

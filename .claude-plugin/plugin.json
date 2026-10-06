@@ -1,0 +1,20 @@
+{
+  "name": "clean-code",
+  "description": "Clean Code principles for AI coding agents: write, review, and refactor code with named smells (G1-G36, N, F, C, T), language guides, and review and refactor workflows.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Patrick Baumgartner",
+    "url": "https://github.com/patbaumgartner"
+  },
+  "homepage": "https://github.com/patbaumgartner/clean-code-skill",
+  "repository": "https://github.com/patbaumgartner/clean-code-skill",
+  "license": "MIT",
+  "keywords": [
+    "clean-code",
+    "agent-skills",
+    "code-review",
+    "refactoring",
+    "code-smells",
+    "software-craftsmanship"
+  ]
+}
