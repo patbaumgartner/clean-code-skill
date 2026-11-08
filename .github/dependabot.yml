@@ -1,13 +1,17 @@
 version: 2
 updates:
-  - package-ecosystem: github-actions
-    directory: /
-    schedule:
-      interval: weekly
-    labels:
-      - dependencies
-      - github-actions
-    groups:
-      actions:
-        patterns:
-          - "*"
+- package-ecosystem: github-actions
+  directory: /
+  schedule:
+    interval: weekly
+  labels:
+  - dependencies
+  - github-actions
+  groups:
+    actions:
+      patterns:
+      - '*'
+groups:
+  multi-step-actions:
+    patterns:
+    - github/codeql-action/*
